@@ -99,7 +99,8 @@
     .banner-image {
       width: 100%;
       max-width: 1500px;
-      height: 200px;
+      aspect-ratio: 7.5 / 1;
+      height: auto;
       object-fit: cover;
       display: block;
       margin: 0 auto;
@@ -218,16 +219,19 @@
     <div class="project">
       <div><span class="prompt">streamlit run</span> recommender-system <span class="tag">Private repository</span>
       </div>
-      <p class="muted">A course seminar project focused on developing a book recommendation system using Python and
-        machine learning libraries. The application analyzes book-related data and provides recommendations based on
-        similarities between books using a Collaborative Filtering algorithm.</p>
+      <p class="muted">A book recommendation system <strong>developed as part of my studies.</strong> The project focuses on analyzing
+        book rating data and generating personalized book recommendations using an item-based Collaborative Filtering
+        approach. The system identifies books with similar user rating patterns and recommends them based on their
+        similarity.</p>
 
-      <p class="muted">The project uses Pandas and NumPy for data processing and analysis, including DataFrames, pivot
-        tables, and value counts. SciPy Sparse is used for efficient handling of sparse data, while Scikit-learn Nearest
-        Neighbors is used to identify similar books and generate recommendations.</p>
+      <p class="muted">The application processes book and rating data using Pandas and creates a user-book rating matrix
+        with users as rows and books as columns. Books with fewer than 30 ratings are filtered out to improve the
+        quality of the recommendation data. SciPy Sparse is used to efficiently handle the sparse rating matrix, while
+        Scikit-learn Nearest Neighbors with cosine similarity is used to find the most similar books.</p>
 
-      <p class="muted">The recommendation system is presented through a Streamlit web application, providing an
-        interactive interface for exploring the recommendations and demonstrating the functionality of the system.</p>
+      <p class="muted">Designed and implemented the data processing pipeline, recommendation algorithm, and Streamlit
+        web application. The application allows users to search for a book, select the desired title from matching
+        results, and receive similar book recommendations displayed with titles, authors, and cover images.</p>
 
       <span class="tag">Python</span>
       <span class="tag">Virtual Environment</span>
@@ -241,9 +245,12 @@
       <span class="tag">DataFrames</span>
       <span class="tag">Pivot Tables</span>
       <span class="tag">Value Counts</span>
-      <span class="tag">Sparse Data</span>
+      <span class="tag">Data Filtering</span>
+      <span class="tag">Sparse Matrices</span>
+      <span class="tag">Cosine Similarity</span>
       <span class="tag">Nearest Neighbors</span>
       <span class="tag">Collaborative Filtering</span>
+      <span class="tag">Item-Based Recommendation</span>
       <span class="tag">Recommendation System</span>
       <span class="tag">Machine Learning</span>
       <span class="tag">Streamlit Application</span>
@@ -254,7 +261,8 @@
     <div class="project">
       <div><span class="prompt">npx expo start</span> <a href="https://github.com/Eriikakl/Book-Club" target="_blank"
           rel="noopener noreferrer" class="project-link"> Book-Club</a></div>
-      <p class="muted">A project developed as part of my studies. A mobile application built with React Native and Expo,
+      <p class="muted"><strong>A project developed as part of my studies.</strong> A mobile application built with React
+        Native and Expo,
         using Firebase for authentication and
         real-time data storage. The application integrates the Google Books API to provide book-related data and
         includes functionality for managing user profiles and application data.</p>
@@ -291,10 +299,11 @@
     </div>
 
     <div class="project">
-      <div><span class="prompt">build</span> ohjelmistoprojekti1 <span class="tag">Source Code via Pinned
+      <div><span class="prompt">mvn spring-boot:run</span> ohjelmistoprojekti1 <span class="tag">Source Code via Pinned
           Repository</span></div>
       <div><span class="prompt">npm run build</span> op1-client</div>
-      <p class="muted">A project developed as part of my studies. A full-stack application developed with Java, Spring
+      <p class="muted"><strong>A project developed as part of my studies.</strong> A full-stack application developed
+        with Java, Spring
         Boot, React, and modern frontend
         technologies. The application provides a RESTful API with user authentication, authorization, database
         integration, and input validation, combined with a responsive React-based user interface.</p>
