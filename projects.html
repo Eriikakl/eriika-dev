@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dev://projects</title>
+
+  <style>
+    :root {
+      --bg: #181717;
+      --panel: #242424;
+      --text: #ffffff;
+      --muted: #fff68f;
+      --accent: #f7f7f0;
+      --border: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .banner {
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(192, 191, 191, 0.167), transparent);
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 26px;
+      color: var(--accent);
+      text-shadow: 0 0 10px rgba(255, 234, 1, 0.548);
+    }
+
+    .banner p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    nav {
+      padding: 14px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav a {
+      color: var(--accent);
+      margin: 0 12px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 8px var(--accent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .project {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .prompt {
+      color: var(--accent);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      margin: 4px;
+      border-radius: 6px;
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .banner-image {
+      width: 100%;
+      max-width: 1500px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+
+      -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, #000 5%, #000 93%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 7%, #000 90%, transparent 100%);
+
+      -webkit-mask-composite: source-in;
+
+      mask-image:
+        linear-gradient(to right, transparent 0%, #000 5%, #000 93%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 7%, #000 90%, transparent 100%);
+
+      mask-composite: intersect;
+    }
+
+    .project-link {
+      color: #ffffff;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    .project-link:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    <img src="img/picture1.png" alt="Kuva" class="banner-image">
+    <br>
+    <h1>> eriika-k</h1>
+    <p>// Junior Software Developer</p>
+  </div>
+
+  <nav>
+    <a href="index.html">~/about</a>
+    <a href="projects.html">~/projects</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="project">
+      <div><span class="prompt">git clone</span> <a href="https://github.com/Eriikakl/ai-test-generator" target="_blank"
+          rel="noopener noreferrer" class="project-link">ai-test-generator</a></div>
+      <p class="muted"> An AI-powered automation workflow that generates test cases and usability tests from Jira user
+        stories. Generated test cases are automatically created in Jira and linked back to their original user stories,
+        while usability tests are generated based on the user story and its test cases. </p>
+
+      <p class="muted"> The application receives a Jira event through a webhook, retrieves the related user story, and
+        builds structured prompts for the AI model. Google Gemini generates test cases based on the user story, followed
+        by usability tests based on the user story and generated test cases. </p>
+
+      <p class="muted"> Designed and implemented the backend architecture, Jira integration, AI integration, test case
+        and usability test generation workflows, and automated linking between user stories and generated test cases.
+      </p>
+      <span class="tag">Python</span>
+      <span class="tag">Requests</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">Google Gemini API</span>
+      <span class="tag">JSON</span>
+      <span class="tag">Jira</span>
+      <br /><br />
+      <span class="tag">REST API integration</span>
+      <span class="tag">Webhook-based automation</span>
+      <span class="tag">LLM integration</span>
+      <span class="tag">Prompt engineering</span>
+      <span class="tag">Structured JSON data</span>
+      <span class="tag">Service layer architecture</span>
+      <span class="tag">Automated Jira issue creation and linking</span>
+      <span class="tag">Mock LLM for testing</span>
+    </div>
+
+    <div class="project">
+      <div><span class="prompt">./mvnw spring-boot:run</span> <a href="https://github.com/Eriikakl/LogDen"
+          target="_blank" rel="noopener noreferrer" class="project-link">LogDen</a></div>
+
+      <p class="muted">A full-stack e-commerce application with a Spring Boot REST API backend and PostgreSQL database.
+        The application provides functionality for managing products, categories, shopping carts, and orders, with
+        authentication and role-based access control implemented using Spring Security and JWT.</p>
+
+      <p class="muted">The backend exposes REST endpoints for the core e-commerce functionality and uses Spring Data JPA
+        for database access. Input validation and centralized exception handling are implemented to provide consistent
+        API behavior and error responses.</p>
+
+      <p class="muted">Designed and implemented the backend architecture, REST API, database relationships, JWT-based
+        authentication, role-based authorization, validation, and exception handling. The development environment is
+        containerized using Docker and VS Code Dev Containers.</p>
+
+      <span class="tag">Java 21</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Spring Web</span>
+      <span class="tag">Spring Data JPA</span>
+      <span class="tag">Spring Security</span>
+      <span class="tag">JWT</span>
+      <span class="tag">Bean Validation</span>
+      <span class="tag">Maven</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Docker</span>
+      <span class="tag">VS Code Dev Containers</span>
+      <br /><br />
+      <span class="tag">REST API</span>
+      <span class="tag">JWT-based authentication</span>
+      <span class="tag">Role-based access control</span>
+      <span class="tag">Entity relationships</span>
+      <span class="tag">Input validation</span>
+      <span class="tag">Exception handling</span>
+      <span class="tag">Service layer architecture</span>
+      <span class="tag">Repository pattern</span>
+    </div>
+
+    <div class="project">
+      <div><span class="prompt">streamlit run</span> recommender-system <span class="tag">Private repository</span>
+      </div>
+      <p class="muted">A course seminar project focused on developing a book recommendation system using Python and
+        machine learning libraries. The application analyzes book-related data and provides recommendations based on
+        similarities between books using a Collaborative Filtering algorithm.</p>
+
+      <p class="muted">The project uses Pandas and NumPy for data processing and analysis, including DataFrames, pivot
+        tables, and value counts. SciPy Sparse is used for efficient handling of sparse data, while Scikit-learn Nearest
+        Neighbors is used to identify similar books and generate recommendations.</p>
+
+      <p class="muted">The recommendation system is presented through a Streamlit web application, providing an
+        interactive interface for exploring the recommendations and demonstrating the functionality of the system.</p>
+
+      <span class="tag">Python</span>
+      <span class="tag">Virtual Environment</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">SciPy</span>
+      <span class="tag">Scikit-learn</span>
+      <span class="tag">Streamlit</span>
+      <br /><br />
+      <span class="tag">Data Analysis</span>
+      <span class="tag">DataFrames</span>
+      <span class="tag">Pivot Tables</span>
+      <span class="tag">Value Counts</span>
+      <span class="tag">Sparse Data</span>
+      <span class="tag">Nearest Neighbors</span>
+      <span class="tag">Collaborative Filtering</span>
+      <span class="tag">Recommendation System</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Streamlit Application</span>
+      <br /><br />
+
+    </div>
+
+    <div class="project">
+      <div><span class="prompt">npx expo start</span> <a href="https://github.com/Eriikakl/Book-Club" target="_blank"
+          rel="noopener noreferrer" class="project-link"> Book-Club</a></div>
+      <p class="muted">A project developed as part of my studies. A mobile application built with React Native and Expo,
+        using Firebase for authentication and
+        real-time data storage. The application integrates the Google Books API to provide book-related data and
+        includes functionality for managing user profiles and application data.</p>
+
+      <p class="muted">The front-end is implemented with React Native and uses React Navigation for tab and stack-based
+        navigation. React Native Paper is used for UI components, while Expo Font provides custom font support. Firebase
+        Authentication handles user authentication and Firebase Realtime Database is used for storing and synchronizing
+        application data.</p>
+
+      <p class="muted">Implemented the mobile application architecture, navigation, user authentication, real-time
+        database integration, Google Books API integration, profile image selection, and date and time selection. The
+        application uses Expo Image Picker for profile pictures and React Native DateTimePicker for selecting dates and
+        times.</p>
+
+      <span class="tag">React Native</span>
+      <span class="tag">Expo</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">React Native Paper</span>
+      <span class="tag">React Navigation</span>
+      <span class="tag">Expo Font</span>
+      <span class="tag">Firebase</span>
+      <span class="tag">Firebase Authentication</span>
+      <span class="tag">Firebase Realtime Database</span>
+      <span class="tag">Firebase SDK</span>
+      <span class="tag">Google Books API</span>
+      <br /><br />
+      <span class="tag">Tab Navigation</span>
+      <span class="tag">Stack Navigation</span>
+      <span class="tag">User authentication</span>
+      <span class="tag">Real-time data</span>
+      <span class="tag">REST API integration</span>
+      <span class="tag">Profile image selection</span>
+      <span class="tag">Date and time selection</span>
+    </div>
+
+    <div class="project">
+      <div><span class="prompt">build</span> ohjelmistoprojekti1 <span class="tag">Source Code via Pinned
+          Repository</span></div>
+      <div><span class="prompt">npm run build</span> op1-client</div>
+      <p class="muted">A project developed as part of my studies. A full-stack application developed with Java, Spring
+        Boot, React, and modern frontend
+        technologies. The application provides a RESTful API with user authentication, authorization, database
+        integration, and input validation, combined with a responsive React-based user interface.</p>
+
+      <p class="muted">The backend uses Spring Security and JSON Web Tokens (JWT) for authentication and access control,
+        while Spring Data JPA handles database access. H2 is used for development and testing, and MySQL is used in the
+        production environment. The frontend is built with React and Vite, with React Router DOM handling navigation and
+        routing.</p>
+
+      <p class="muted">The user interface is built using Material-UI (MUI), providing reusable components for forms,
+        buttons, and other interface elements. The application also integrates JSQR and qrcode.react for QR code
+        scanning and generation, and ApexCharts for displaying data through interactive charts.</p>
+
+      <p class="muted">Implemented the application architecture, REST API, authentication and authorization, database
+        integration, frontend components, routing, QR code functionality, data visualization, validation, and automated
+        testing. The application is deployed to the CSC Rahti service and containerized using Docker.</p>
+
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Spring Web</span>
+      <span class="tag">Spring Security</span>
+      <span class="tag">Spring Data JPA</span>
+      <span class="tag">JWT</span>
+      <span class="tag">React</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Vite</span>
+      <span class="tag">React Router DOM</span>
+      <span class="tag">Material-UI</span>
+      <span class="tag">H2</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Bean Validation</span>
+      <span class="tag">JUnit 5</span>
+      <span class="tag">Mockito</span>
+      <span class="tag">Docker</span>
+      <br /><br />
+      <span class="tag">REST API</span>
+      <span class="tag">Authentication</span>
+      <span class="tag">Authorization</span>
+      <span class="tag">JWT-based authentication</span>
+      <span class="tag">Database integration</span>
+      <span class="tag">React components</span>
+      <span class="tag">Client-side routing</span>
+      <span class="tag">QR code generation</span>
+      <span class="tag">QR code scanning</span>
+      <span class="tag">Data visualization</span>
+      <span class="tag">Input validation</span>
+      <span class="tag">Unit testing</span>
+      <span class="tag">Integration testing</span>
+      <span class="tag">Docker deployment</span>
+      <span class="tag">Agile Development</span>
+      <span class="tag">Scrum</span>
+      <span class="tag">Team Collaboration</span>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

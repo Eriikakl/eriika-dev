@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dev://portfolio</title>
+
+  <style>
+    :root {
+      --bg: #181717;
+      --panel: #242424;
+      --text: #ffffff;
+      --muted: #fff68f;
+      --accent: #f7f7f0;
+      --border: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .banner {
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(192, 191, 191, 0.167), transparent);
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 26px;
+      color: var(--accent);
+      text-shadow: 0 0 10px rgba(255, 234, 1, 0.548);
+    }
+
+    .banner p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    nav {
+      padding: 14px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav a {
+      color: var(--accent);
+      margin: 0 12px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 8px var(--accent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .terminal {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .prompt {
+      color: var(--accent);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      margin: 4px;
+      border-radius: 6px;
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .banner-image {
+      width: 100%;
+      max-width: 1500px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+
+      -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, #000 5%, #000 93%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 7%, #000 90%, transparent 100%);
+
+      -webkit-mask-composite: source-in;
+
+      mask-image:
+        linear-gradient(to right, transparent 0%, #000 5%, #000 93%, transparent 100%),
+        linear-gradient(to bottom, transparent 0%, #000 7%, #000 90%, transparent 100%);
+
+      mask-composite: intersect;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    <img src="img/picture1.png" alt="Kuva" class="banner-image">
+    <br>
+    <h1>> eriika-k</h1>
+    <p>// Junior Software Developer</p>
+  </div>
+
+  <nav>
+    <a href="index.html">~/about</a>
+    <a href="projects.html">~/projects</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="terminal">
+      <div><span class="prompt">user@portfolio:~$</span> whoami</div>
+      <div class="muted">Recent BBA graduate - Degree Programme in Business Information Technology. <br />
+        Focus on full-stack development.
+      </div>
+
+      <br />
+
+      <div><span class="prompt">user@portfolio:~$</span> cat about.txt</div>
+      <div class="muted">
+        Developer building web and backend projects.<br />
+        Focused on Java, JavaScript, Python, and TypeScript.
+        Interested in AI, automation, and modern technologies.
+      </div>
+
+      <br />
+
+      <div><span class="prompt">user@portfolio:~$</span> skills</div>
+      <div class="muted">
+        Languages, frameworks, tools, databases, and development practices
+      </div>
+
+      <div>
+        <span class="tag">Java</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">React</span>
+        <span class="tag">React Native</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">SQL</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">Spring Security</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Git</span>
+        <span class="tag">VS Code</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Jira</span>
+        <span class="tag">GEN AI</span>
+      </div>
+
+      <br />
+
+      <div><span class="prompt">user@portfolio:~$</span> cat pic.jpg</div>
+      <div class="muted">
+        <pre id="output"></pre>
+      </div>
+
+      <br />
+
+    </div>
+
+  </div>
+
+  <script src="terminal.js" defer></script>
+</body>
+
+</html>
